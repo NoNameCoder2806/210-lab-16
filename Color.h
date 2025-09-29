@@ -51,17 +51,17 @@ public:
     }
 
     // Accessors / Getters
-    int getRed()
+    int getRed() const
     {
         return red;        // Return the red value
     }
 
-    int getGreen()
+    int getGreen() const
     {
         return green;      // Return the green value
     }
 
-    int getBlue()
+    int getBlue() const
     {
         return blue;       // Return the blue value
     }
@@ -128,7 +128,7 @@ public:
         Arguments: none
         Return: none
     */
-    void print()
+    void print() const
     {
         // Display the color values
         cout << " - Red: " << getRed() << endl;          // Red
