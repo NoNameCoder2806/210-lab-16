@@ -21,6 +21,42 @@ public:
     static const int MIN_RGB = 0;        // Min RGB value
     static const int RGB_RANGE = 256;    // RGB value range
 
+    // Constructors
+    Color()                         // Default constructor
+    {
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
+
+    Color(int r, int g, int b)      // Parameters constructor
+    {
+        red = r;
+        green = g;
+        blue = b;
+    }
+
+    Color(int r)                    // Partial constructor (Red value)
+    {
+        red = r;
+        green = 0;
+        blue = 0;
+    }
+
+    Color(int g)                    // Partial constructor (Green value)
+    {
+        red = 0;
+        green = g;
+        blue = 0;
+    }
+
+    Color(int b)                    // Partial constructor (Blue value)
+    {
+        red = 0;
+        green = 0;
+        blue = b;
+    }
+
     // Accessors / Getters
     int getRed()
     {
