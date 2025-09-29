@@ -10,7 +10,7 @@
 using namespace std;
 
 // Constants
-const int NUMBER_OF_COLORS = 10;
+const int NUMBER_OF_COLORS = 5;
 
 // Main function
 int main()
@@ -21,27 +21,33 @@ int main()
     // Call srand and time to create a seed
     srand(time(0));
 
-    // Randomly create 10 Color objects
+    // Create a Color object using the Default constructor
+    Color obj;
+
+    // Add the Color object into the vector
+    colors.push_back(obj);
+
+    // Create 3 Color objects using the Parameter constructor
     for (int i = 0; i < NUMBER_OF_COLORS; i++)
     {
-        // Create a temporary color object
-        Color temp;
+        // Declare 3 integers to hold the RGB values
+        int r = rand() % (Color::MAX_RGB + 1);      // Randomize a red value
+        int g = rand() % (Color::MAX_RGB + 1);      // Randomize a green value
+        int b = rand() % (Color::MAX_RGB + 1);      // Randomize a blue value
 
-        // Set the values via the mutators
-        temp.setRed(rand() % (Color::MAX_RGB + 1));        // Randomize a red value
-        temp.setGreen(rand() % (Color::MAX_RGB + 1));      // Randomize a green value
-        temp.setBlue(rand() % (Color::MAX_RGB + 1));       // Randomize a blue value
+        // Create a temporary Color object via the Parameter constructor
+        Color temp(r, g, b);
 
-        // Push the object into the vector
+        // Add the Color objects into the vector
         colors.push_back(temp);
     }
 
-    // Create a Color object to test the out of range values
-    Color color1;              // Create a Color objectobject
-    color1.setRed(455);        // Set the red value
-    color1.setGreen(-360);     // Set the green value
-    color1.setBlue(125);       // Set the blue value
-    colors.push_back(color1);  // Add the Color object to the vector
+    // Create a Color object using a Partial constructor (Red value)
+    int r = rand() % (Color::MAX_RGB + 1);      // Randomize a red value
+
+    // Create a Color object using a Partial constructor (Green value)
+
+    // Create a Color object using a Partial constructor (Blue value)
 
     // Iterate through the vector and display all the Color objects
     for (int i = 0; i < colors.size(); i++)
