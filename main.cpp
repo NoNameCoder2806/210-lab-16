@@ -44,10 +44,14 @@ int main()
 
     // Create a Color object using a Partial constructor (Red value)
     int r = rand() % (Color::MAX_RGB + 1);      // Randomize a red value
+    Color c1(r);                                // Partial constructor (Red value)
+    colors.push_back(c1);                       // Add the Color object into the vector
 
-    // Create a Color object using a Partial constructor (Green value)
-
-    // Create a Color object using a Partial constructor (Blue value)
+    // Create a Color object using a Partial constructor (Green and Blue value)
+    int b = rand() % (Color::MAX_RGB + 1);      // Randomize a blue value
+    int g = rand() % (Color::MAX_RGB + 1);      // Randomize a green value
+    Color c2(b, g);                             // Partial constructor (Green and Blue value)
+    colors.push_back(c2);                       // Add the Color object into the vector
 
     // Iterate through the vector and display all the Color objects
     for (int i = 0; i < colors.size(); i++)

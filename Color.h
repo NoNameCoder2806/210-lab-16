@@ -43,17 +43,10 @@ public:
         blue = 0;
     }
 
-    Color(int g)                    // Partial constructor (Green value)
+    Color(int g, int b)             // Partial constructor (Green and Blue value)
     {
         red = 0;
         green = g;
-        blue = 0;
-    }
-
-    Color(int b)                    // Partial constructor (Blue value)
-    {
-        red = 0;
-        green = 0;
         blue = b;
     }
 
