@@ -1,4 +1,4 @@
-// COMSC-210 | Lab 14 | Dat Hoang Vien
+// COMSC-210 | Lab 16 | Dat Hoang Vien
 // IDE used: Visual Code Studio
 
 #pragma once
